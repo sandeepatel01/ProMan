@@ -3,8 +3,8 @@ import express from "express";
 const app = express();
 
 // Routers Imports
-import { healthcheck } from "./controllers/healthcheck.controllers.js";
+import healthCheckRouter from "./routes/healthcheck.routes.js";
 
-app.use("/api/v1/healthcheck", healthcheck);
+app.use("/api/v1/healthcheck", healthCheckRouter);
 
 export default app;
